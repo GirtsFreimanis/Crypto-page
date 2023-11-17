@@ -1,0 +1,22 @@
+{% include "Partials/head.twig" %}
+{% include "Partials/navbar.twig" %}
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th scope="col">symbol</th>
+        <th scope="col">price</th>
+        <th scope="col">volume</th>
+    </tr>
+    </thead>
+    {% for cryptoPair in cryptoPairs %}
+        <tbody>
+        <tr>
+            <td>{{ cryptoPair.symbol }}</td>
+            <td>{{ cryptoPair.lastPrice }}</td>
+            <td>{{ cryptoPair.volume }}</td>
+        </tr>
+        </tbody>
+    {% endfor %}
+
+</table>
+</body>
